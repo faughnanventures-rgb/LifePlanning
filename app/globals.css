@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+  }
+  
+  .report-content {
+    box-shadow: none !important;
+    border: none !important;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d6d3d1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a29e;
+}
+
+/* Report content styles */
+.report-content h1 {
+  @apply text-2xl font-bold text-stone-800 mb-4 pb-2 border-b-2 border-sage-400;
+}
+
+.report-content h2 {
+  @apply text-xl font-semibold text-stone-700 mt-8 mb-3;
+}
+
+.report-content h3 {
+  @apply text-lg font-medium text-sage-700 mt-6 mb-2;
+}
+
+.report-content p {
+  @apply mb-4 leading-relaxed;
+}
+
+.report-content ul {
+  @apply mb-4 ml-4;
+}
+
+.report-content li {
+  @apply mb-2 pl-2;
+  list-style-type: disc;
+}
+
+.report-content strong {
+  @apply text-stone-700;
+}
+
+.report-content hr {
+  @apply my-8 border-stone-200;
+}
